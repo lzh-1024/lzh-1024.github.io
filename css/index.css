@@ -50,7 +50,7 @@ li{
 	background: #00BFFF;
 	left: 0;
 	top: 0;
-	transition: 3s height;
+	transition: 2s height;
 }
 #animate>.bottom{
 	position: absolute;
@@ -59,7 +59,7 @@ li{
 	background: #00BFFF;
 	left: 0;
 	bottom: 0;
-	transition: 3s height;
+	transition: 2s height;
 }
 #animate>.line{
 	position: absolute;
