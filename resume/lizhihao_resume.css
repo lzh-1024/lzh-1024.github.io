@@ -1,0 +1,112 @@
+/* 清除浏览器默认样式 */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+body{
+	background: url(img/bbg.jpg) no-repeat;
+	background-size:100% 2000px;
+}
+a{
+	text-decoration: none;
+	display: block;
+}
+img{
+	display: block;
+}
+li{
+	list-style: none;
+}
+/* 清除浮动 */
+.clearfix{
+	*zoom: 1;
+}
+.clearfix:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+h2{
+	font-size: 21px;
+}
+h3{
+	font-size: 17px;
+}
+#wrap{
+	width: 1000px;
+	margin: 0 auto;
+}
+/* 头部 */
+#header{
+	text-align: center;
+	height: 250px;
+	position: relative;
+}
+#header>img{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin-top: 30px;
+	opacity: 0;
+	transform: translateY(-140px);
+	transition: 1s all;
+}
+#header>h1{
+	width: 100px;
+	background: #00E4FF;
+	position: absolute;
+    left: 0;
+	right: 0;
+	bottom: 50px;
+	margin: auto;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: 1s all;
+	color: rgba(0,0,0,0.6);
+}
+/* 内容 */
+#content{
+	padding: 0 50px;
+	margin-bottom: 50px;
+}
+#content>.content-div{
+	height: 1530px;
+	background: url(img/bg.jpg) no-repeat;
+	background-size:100% 100%;
+	position: relative;
+}
+#content>.content-div>.content-detail{
+	position: absolute;
+	width:797px;
+	left: 50px;
+	top: 180px;
+	box-sizing: border-box;
+	
+}
+#content>.content-div>.content-detail>h2{
+	border-left: 6px solid deeppink;
+	padding-left: 20px;
+}
+#content>.content-div>.content-detail>div{
+   background: #EAEAEA;
+   margin:25px;
+   padding: 10px;
+}
+#content>.content-div>.content-detail>div>ul>li{
+	margin-left:10px;
+	margin-bottom: 18px;
+}
+#content>.content-div>.content-detail>div>ul>li>span{
+	margin-right:40px;
+	  width: 250px;
+	  display: block;
+	  float: left;
+	  word-break: break-all;
+}
+#content>.content-div>.content-detail>div>ul>li:last-of-type{
+	margin-bottom: 0px;
+}
