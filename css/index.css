@@ -1,0 +1,527 @@
+
+@font-face {
+	font-family:zk;
+	src: url('../fonts/zk.ttf');
+}
+
+/* 清除浏览器默认样式 */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	position: relative;
+}
+a{
+	text-decoration: none;
+	display: block;
+}
+img{
+	display: block;
+}
+li{
+	list-style: none;
+}
+/* 清除浮动 */
+.clearfix{
+	*zoom: 1;
+}
+.clearfix:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+
+#header{
+	width: 1100px;
+	height: 80px;
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+}
+#header h1{
+	float: left;
+}
+#header nav{
+	float: right;
+}
+#header .logo{
+	width: 80px;
+}
+#header .list{
+	margin-top: 50px;
+}
+#header .list li{
+	float: left;
+	position: relative;
+	margin-left: 50px;
+	font-weight: bold;
+}
+#header .list li .up{
+	position: absolute;
+	color:deepskyblue;
+	width: 0;
+	overflow: hidden;
+	transition: 1s width;
+	white-space: nowrap;
+}
+#header .list li:hover .up{
+	width: 100%;
+}
+#header .list li .down{
+	color: #A9A9A9;
+}
+#header .arrow{
+	width: 0;
+	height: 0;
+	border: 12px solid;
+	border-color:#fff transparent transparent;
+	position: absolute;
+	left: 0;
+	bottom: -24px;
+	transition: 1s left;
+	z-index: 10;
+}
+
+
+#content{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+#content .list{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+transition: 1s top;
+}
+#content .list li{ 
+	position: relative;
+}
+#content .list li:nth-of-type(1){ 
+	background: url(../img/bg1.jpg) no-repeat;
+	background-size:100% 100%;
+	background-position: 50% 50%;
+	animation:mymove 7s infinite;
+	-webkit-animation:mymove 7s infinite; /* Safari 和 Chrome */
+}
+@keyframes mymove
+{
+0% {background-size:100% 100%;}
+50% {background-size:120% 120%;}
+100% {background-size:100% 100%;}
+}
+
+@-webkit-keyframes mymove 
+{
+0% {background-size:100% 100%;}
+50% {background-size:120% 120%;}
+100% {background-size:100% 100%;}
+}
+#content .list li:nth-of-type(2){ 
+	background: url(../img/bg2.jpg) no-repeat;
+	background-size:100% 100%;
+	background-position: 50% 50%;
+}
+#content .list li:nth-of-type(3){ 
+	background: url(../img/bg3.jpg) no-repeat;
+	background-size:100% 100%;
+	background-position: 50% 50%;
+	
+}
+#content .list li:nth-of-type(4){ 
+	background: url(../img/bg4.jpg) no-repeat;
+	background-size:100% 100%;
+	background-position: 50% 50%;
+	
+}
+
+#content .content_div{
+	width: 1200px;
+	height: 95%;
+	background: rgba(88,91,88,0);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	overflow: hidden;
+}
+#content .list-o{
+  position: fixed;
+  right: 50px;
+  top: 50%;	
+  
+}
+#content .list-o>li {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#content .list-o>li:after {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: -10px;
+  top: -10px;
+  content: '';
+  border-radius: 50%;
+  border: 2px solid pink;
+}
+
+#content .list-o>li.active:after {
+ 
+ background: deepskyblue;
+}
+
+
+
+/* 主页 */
+#content .list .indexPage>img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: absolute;
+	left: 540px;
+	top: 10px;
+	opacity: 0;
+	transition: 2s all;
+}
+#content .list .indexPage{
+	text-align: center;
+}
+#content .list .indexPage>div{
+	position: absolute;
+	left: 375px;
+	bottom: 10px;
+	opacity: 0;
+	transition: 2s all;
+}
+#content .list .indexPage .title,#content .list .indexPage .title2{
+	color: #FFFFFF;
+	font-family: zk;
+}
+#content .list .indexPage .title{
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+#content .list .indexPage .title2{
+	font-size: 30px;
+}
+
+/* 页面标题 */
+#content  .page-title{	
+	text-align: center;
+	position: relative;
+	margin:20px 0;
+	color: rgba(0,0,0,0.6);
+}
+#content  .page-depict{	
+	text-align: center;
+	margin-bottom: 50px;
+	color: rgba(0,0,0,0.6);
+	opacity: 1;
+	transform: translateY(70px);
+	transition: 2s all;
+}
+#content .page-title .line{
+	height: 5px;
+	width: 0px;
+	background: pink;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	margin: auto;
+	transition: 1s width;
+}
+
+/* 我的作品 */
+#content .worksPage .phohe-project{	
+	width: 200px;
+	height: 425px;
+	background: url(../img/phone.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+	position: relative;
+	float: left;
+}
+
+#content .worksPage .phohe-project>img,#content .worksPage .phohe-project>.shade{	
+	width: 182px;
+	height: 340px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
+#content .worksPage .phohe-project>.shade>#phoneEwm{
+	width: 80px;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+#content .worksPage .pc-project{	
+     width: 512px;
+     height: 512px;
+     background: url(../img/pc_bgManage.png) no-repeat;
+	 background-position: 0px -20px;
+     background-size: 100% 100%;
+     cursor: pointer;
+     position: relative;
+	 left: 20px;
+     float: left;
+}
+#content .worksPage .pc-project>img,#content .worksPage .pc-project>.shade{	
+	position: absolute;
+	left: 26px;
+	top: 50px;
+     width: 459px;
+     height: 303px;
+}
+#content .worksPage .shade{
+		color: #FFFFFF;
+		padding:60px 8px 0 8px;
+		box-sizing: border-box;
+	  opacity: 0;
+	 background: rgba(0,0,0,0.7);
+}
+#content .worksPage .shade:hover{
+	opacity: 1;
+}
+
+
+#content .worksPage .outher-project{	
+     position: relative;
+	 left: 40px;
+     float: left;
+	 width: 400px;
+	 height: 100%;
+}
+#content .worksPage .outher-project>a{	
+	 width: 180px;
+	 height: 220px;
+	 background: red;
+	 margin: 10px;
+	 float: left;
+	 position: relative;
+	 cursor: pointer;
+	box-shadow: 5px 5px 5px #888888;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#content .worksPage .outher-project>a>img{	
+	 width: 100%;
+	 height: 100%;
+	
+}
+#content .worksPage .outher-project>a>div{	
+	width: 100%;
+	height: 100%;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 background: rgba(0,0,0,0.5);
+	 color: #FFFFFF;
+	 padding: 20px 10px 10px 10px;
+	 box-sizing: border-box;
+	 font-family: 微软雅黑;
+	 opacity: 0;
+}
+#content .worksPage .outher-project>a>div>img{
+	margin-top: 10px;
+}
+#content .worksPage .outher-project>a>div>.works-title{
+	text-align: center;
+}
+#content .worksPage .outher-project>a>div>.works-title2{
+	margin-top: 10px;
+	word-break: break-all;
+	text-indent: 2em;
+}
+#content .worksPage .outher-project>a:hover div{	
+	 opacity: 1;
+}
+#content .worksPage .outher-project>a:hover{	
+	 transform: scale(1.1);
+}
+/* 分割线 */
+/* #content .worksPage .works-box{	
+	overflow: hidden;
+}
+#content .worksPage .works-box>div{
+	width: 280px;
+	height:200px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	float: left;
+	margin: 10px;	
+	transform: rotate(0deg);
+	transform: scale(0);
+	transition: 1s all;
+}
+#content .worksPage .works-box>div>img{
+	width: 100%;
+	height: 100%;
+	transform-origin:50% 50%;
+	transition: 1s all;
+}
+#content .worksPage .works-box>div>div{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0;
+	color: #FFFFFF;
+	text-align: center;
+}
+#content .worksPage .works-box>div>div>img{
+	margin-top: 20px;
+	width: 40px;
+	margin-left: 115px;
+}
+#content .worksPage .works-box>div>div>.works-title{
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+#content .worksPage .works-box>div:hover>div{
+	opacity: 0.8;
+}
+#content .worksPage .works-box>div:hover>img{
+	transform: rotate(-35deg);
+	transform: scale(2)
+}
+#content .worksPage .works-number{
+	width: 100%;
+	margin-top: 30px;
+}
+#content .worksPage .works-number>div{
+	text-align: center;
+}
+#content .worksPage .works-number>div>a{
+	display: inline-block;
+	background: #A9A9A9;
+	padding:3px 8px;
+	margin: 0 8px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 15px;
+	transition: 0.5s transform;
+}
+#content .worksPage .works-number>div>a:hover,#content .worksPage .works-number>div>a.active{
+	background: #00BFFF;
+	transform: scale(1.5);
+} */
+
+/* 我的简历 */
+#content .resumePage .left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 50px;
+	text-align: center;
+	box-sizing: border-box;
+} 
+#content .resumePage .left>h3,#content .resumePage .right>h3{
+	margin-bottom: 40px;
+} 
+#content .resumePage .right{
+	width: 50%;
+	height: 70%;
+	float: left;
+	padding: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	border-left: 2px #000000 solid;
+} 
+#content .resumePage .left .progess{
+	margin-bottom: 20px;
+} 
+#content .resumePage .left .progess>div{
+	float: left;
+} 
+#content .resumePage .left .progess>.progess-name{
+	width: 80px;
+} 
+#content .resumePage .left .progess>.progess-number{
+	width: 300px;
+	height: 18px;
+	background: #A9A9A9;
+	border-radius: 16px;
+} 
+#content .resumePage .left .progess>.progess-number>div{
+	  width: 0;
+	  height: 100%;
+	  background-color: #4CAF50;
+	  text-align: center;
+	  color: white;
+	  border-radius: 16px;
+	  transition: 1s width;
+} 
+#content .resumePage .right>a{
+	width: 200px;
+	display: inline-block;
+	box-shadow: 10px 10px 5px #888888;
+} 
+#content .resumePage .right>a:hover{
+	transform: scale(1.2);
+} 
+#content .resumePage .right>a>img{
+	width: 100%;
+	height: 100%;
+} 
+
+/* 手机模拟页面 */
+.phohe-project2{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	z-index: 100;
+	width: 333px;
+	height: 708px;
+	background: url(../img/phone.png) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+.phohe-project2>iframe{	
+	width: 300px;
+	height: 560px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
+.phohe-project2>img{	
+	width: 40px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 101;
+	cursor: pointer;
+}
+.phohe-project2>img:hover{	
+	transform: scale(1.2);
+}
