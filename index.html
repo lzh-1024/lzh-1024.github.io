@@ -7,6 +7,13 @@
 	</head>
 	<body>
 		<section>
+			<!-- 开幕动画 -->
+			<div id="animate">
+				<div class="top"></div>
+				<div class="line"></div>
+				<div class="bottom"></div>
+			</div>
+			
 			<header id="header">
 				<h1>
 					<a href="javascript:;">
@@ -300,6 +307,37 @@
 			var now=0;
 			var time=null;
 			
+			
+			//开幕动画
+			var animate=document.querySelector("#animate");
+			var animate_line=document.querySelector("#animate>.line");
+			var animate_top=document.querySelector("#animate>.top");
+			var animate_bottom=document.querySelector("#animate>.bottom");
+			
+			first_animate();
+			// 开幕动画
+			function first_animate(){
+				var imgsArry=["bg1.jpg","bg2.jpg","bg3.jpg","bg4.jpg"]
+				var flag=0;
+				for (var i = 0; i < imgsArry.length; i++) {
+					var imgs=new Image()
+					imgs.src="img/"+imgsArry[i];
+					imgs.onload=function(){
+						flag++;
+						animate_line.style.width=flag/imgsArry.length*100+"10%"
+					}
+				}
+				animate_line.addEventListener("transitionend",function(){
+					animate_top.style.height="0px"
+					animate_bottom.style.height="0px"
+					animate_line.style.display="none"
+				})
+				animate_top.addEventListener("transitionend",function(){
+					animate.remove()
+					setHeader()	
+				})
+			}
+			
 			//各页的动画
 			var arrmove=[
 				{
@@ -371,7 +409,7 @@
 				},
 				]
 			
-			setHeader()	
+			
 			function setHeader(){
 // 				var first_x=alist[0].offsetLeft+alist[0].offsetWidth/2-arrow.offsetWidth/2;
 // 				arrow.style.left=''+first_x+'px';
