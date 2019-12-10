@@ -78,14 +78,14 @@
 											<img src="img/wmapp.png"/>
 											<div class="shade">
 												<h3>仿美团外卖webapp实现的vue移动项目(可点击预览(会有偏差)或者扫下面二维码手机体验)</h3>
-												<img id="phoneEwm" src="img/phoneEwm.png"/>
+												<img id="phoneEwm" src="img/waimaiAppEwm.png"/>
 											</div>
 										</div>
 										<div id="phone-open2" class="phohe-project">
 											<img src="img/webapp.PNG"/>
 											<div class="shade">
 												<h3>Vue实现的web移动端项目demo(可点击预览(会有偏差)或者扫下面二维码手机体验)</h3>
-												<img id="phoneEwm" src="img/phoneEwm.png"/>
+												<img id="phoneEwm" src="img/shopAppEwm.png"/>
 											</div>
 										</div>
 									</div>
@@ -281,6 +281,7 @@
 		</section>
 		<!-- 模拟手机页面 -->
 		<div id="phone-model" class="phohe-project2">
+			<a id="project_href" class="project-href" href="https://lzh-1024.github.io/iframe/waimaiApp/index.html" target="_blank">浏览器打开</a>
 			<img id="phone-close" src="img/close.png"/>
 			<iframe id="iframe_set" src="iframe/waimaiApp/index.html" scrolling="auto"></iframe>
 		</div>
@@ -576,11 +577,14 @@
 			
 			//手机模拟
 			var iframe_set=document.getElementById('iframe_set')
+			var project_href=document.getElementById('project_href')
 			phone_open.addEventListener("click",function(){
+				project_href.setAttribute('href','https://lzh-1024.github.io/iframe/waimaiApp/index.html')
 				iframe_set.setAttribute('src','iframe/waimaiApp/index.html')
 				phone_model.style.display="block";
 			})
 			phone_open2.addEventListener("click",function(){
+				project_href.setAttribute('href','https://lzh-1024.github.io/iframe/shopApp/index.html')
 				iframe_set.setAttribute('src','iframe/shopApp/index.html')
 				phone_model.style.display="block";
 			})
