@@ -283,6 +283,19 @@ transition: 1s top;
 }
 
 /* 我的作品 */
+
+#content .worksPage .my-projects{	
+	display: flex;
+}
+#content .worksPage .phone-projects{	
+	width: 200px;
+	overflow: hidden;
+}
+#content .worksPage .phone-projects .phoneProject-content{	
+	width: 400px;
+	display: flex;
+	transition: transform 1s;
+}
 #content .worksPage .phohe-project{	
 	width: 200px;
 	height: 425px;
@@ -290,9 +303,7 @@ transition: 1s top;
 	background-size: 100% 100%;
 	cursor: pointer;
 	position: relative;
-	float: left;
 }
-
 #content .worksPage .phohe-project>img,#content .worksPage .phohe-project>.shade{	
 	width: 182px;
 	height: 340px;
@@ -302,6 +313,22 @@ transition: 1s top;
 	bottom: 0;
 	top: 0;
 	margin: auto;
+}
+#content .worksPage .phone-projects .number-btn{	
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+#content .worksPage .phone-projects .number-btn img{	
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+#content .worksPage .phone-projects .number-btn img.current{	
+	width: 40px;
+	height: 40px;
 }
 #content .worksPage .phohe-project>.shade>#phoneEwm{
 	width: 80px;
@@ -317,7 +344,6 @@ transition: 1s top;
      cursor: pointer;
      position: relative;
 	 left: 20px;
-     float: left;
 }
 #content .worksPage .pc-project>img,#content .worksPage .pc-project>.shade{	
 	position: absolute;
