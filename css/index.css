@@ -314,6 +314,9 @@ transition: 1s top;
 	top: 0;
 	margin: auto;
 }
+#content .worksPage .phohe-project>img,#content .worksPage .phohe-project>.shade>h3{	
+	word-break: break-all;
+}
 #content .worksPage .phone-projects .number-btn{	
 	width: 200px;
 	display: flex;
@@ -566,7 +569,12 @@ transition: 1s top;
 	background-size: 100% 100%;
 	display: none;
 }
-
+.phohe-project2 .project-href{
+	position: absolute;
+	top: 37px;
+	left: 124px;
+	color: #fff;
+}
 .phohe-project2>iframe{	
 	width: 300px;
 	height: 560px;
